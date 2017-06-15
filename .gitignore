@@ -1,0 +1,4 @@
+.git/
+source/
+node_modules/
+bower_components/
