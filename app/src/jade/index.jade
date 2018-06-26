@@ -1,4 +1,17 @@
 include blocks/head
 	block content
 	
+	include blocks/mixins
+	include blocks/header
+	.row.row__between.container
+		aside.left-bar
+			include blocks/countries
+			include blocks/news
+			include blocks/articles
+		.content
+			p.action Кипр. Подарок Афродиты +2%
+			include blocks/content
+			include blocks/static
+
+
 	include blocks/footer

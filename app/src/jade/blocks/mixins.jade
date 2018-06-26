@@ -1,0 +1,22 @@
+mixin top-nav(items)
+	nav.nav
+		each item, i in items
+			if i === pageId
+				span.nav-item.nav-item__current
+			else
+				a.nav--item(href=item.href)= item.name
+
+mixin countries(items)
+	p.ribbon Выбор стран
+	ul.countries
+		each item, i in items
+			li.countries--item
+				a(href=item.href)= item.name
+
+mixin countries-detail(items)
+	ul.countries--detail
+		each item, i in items
+			li.countries--detail--item
+				a(href=item.href)
+					img.countries--detail--img(src=item.img, alt=item.name)
+					a.country=item.name

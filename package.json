@@ -28,5 +28,8 @@
     "gulp-plumber": "^1.1.0",
     "gulp-stylus": "^2.6.0",
     "rsyncwrapper": "^2.0.1"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1"
   }
 }

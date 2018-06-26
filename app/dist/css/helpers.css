@@ -1,0 +1,89 @@
+.float__left {
+  float: left !important;
+}
+.float__right {
+  float: right !important;
+}
+.float__clear {
+  clear: both !important;
+}
+.text__left {
+  text-align: left !important;
+}
+.text__right {
+  text-align: right !important;
+}
+.text__center {
+  text-align: center !important;
+}
+.text__justify {
+  text-align: justify !important;
+}
+.text__underline {
+  text-decoration: underline !important;
+}
+.text__uppercase {
+  text-transform: uppercase !important;
+}
+.text__no-decoration {
+  text-decoration: none !important;
+}
+.text__bold {
+  font-weight: bold !important;
+}
+.text__normal {
+  font-weight: normal !important;
+}
+.flex {
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+.flex__y-center {
+  -webkit-box-align: center !important;
+  -webkit-align-items: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+}
+.flex__y-top {
+  -webkit-box-align: start !important;
+  -webkit-align-items: flex-start !important;
+      -ms-flex-align: start !important;
+          align-items: flex-start !important;
+}
+.flex__y-bottom {
+  -webkit-box-align: end !important;
+  -webkit-align-items: flex-end !important;
+      -ms-flex-align: end !important;
+          align-items: flex-end !important;
+}
+.flex__x__left {
+  -webkit-box-pack: start !important;
+  -webkit-justify-content: flex-start !important;
+      -ms-flex-pack: start !important;
+          justify-content: flex-start !important;
+}
+.flex__x__right {
+  -webkit-box-pack: end !important;
+  -webkit-justify-content: flex-end !important;
+      -ms-flex-pack: end !important;
+          justify-content: flex-end !important;
+}
+.flex__x__between {
+  -webkit-box-pack: justify !important;
+  -webkit-justify-content: space-between !important;
+      -ms-flex-pack: justify !important;
+          justify-content: space-between !important;
+}
+.flex__x__around {
+  -webkit-justify-content: space-around !important;
+      -ms-flex-pack: distribute !important;
+          justify-content: space-around !important;
+}
+.flex__x__center {
+  -webkit-box-pack: center !important;
+  -webkit-justify-content: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+}
