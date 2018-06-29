@@ -18,6 +18,10 @@ a
 aside
 	width 100%
 	max-width 30%
+	position relative
+	+media(1280px)	
+		max-width 90%
+		margin 0 auto
 
 ul
 	font-family 'Roboto', sans-serif
@@ -38,13 +42,13 @@ hr
 	background: #000
 	
 .row
-	display -webkit-flex
-	display -moz-flex
-	display -ms-flex
-	display -o-flex
 	display flex
 	&__between
 		justify-content space-between
+
+.col
+	@extend .row
+	flex-direction column
 
 .wrapper
 	width 100%
@@ -55,8 +59,19 @@ hr
 	@extend .wrapper
 	padding-top 60px
 
+.main
+	@extend .row
+	@extend .row__between
+	@extend .container
+	+media(1280px)
+		flex-direction column-reverse
+
 .content
 	max-width 65%
+	+media(1280px)
+		max-width 90%
+		width 100%
+		margin: 0 auto
 
 .parallax
 	width 100%
@@ -65,10 +80,8 @@ hr
 	&--l-2,	
 	&--l-3
 		position absolute
-	&--l-0
-		width 100%
-		left 0
-		bottom 0
+		+media(640px)
+			display none
 	&--l-1
 		width 65%
 		left 20%
@@ -99,6 +112,8 @@ hr
 	-webkit-background-clip: text
 	-webkit-text-fill-color: transparent
 	animation gradient 3s ease infinite
+	+media(640px)
+		display none
 @keyframes gradient
 	0%
 		background-position 0% 50%
@@ -120,6 +135,10 @@ hr
 	flex-direction column
 	align-items center
 	justify-content center
+	+media(640px)
+		left 0
+		right 0
+		margin 0 auto
 	p
 		font-family: 'Roboto', sans-serif
 		font-size: 28px
@@ -144,13 +163,20 @@ h1
 	display flex
 	justify-content center
 	align-items center
+	+media(1280px)
+		flex-direction column
+		display none
 	//фикс для мозиллы
 	a
 		color: $blue
 		&:first-child
 			margin-left 0
+			+media(1280px)
+				margin auto
 		&:last-child
 			margin-right 0
+			+media(1280px)
+				margin auto
 	&--item
 		margin 0 auto
 		font-size 21px
@@ -210,8 +236,14 @@ h1
 	padding-left: 20px
 	font-size 22px
 	font-family: 'Times New Roman'
+	+media(1280px)
+		display flex
+		flex-wrap: wrap
 	&--item
 		line-height 1.5
+		margin-right 2em
+		+media(1280px)
+			line-height 2
 	&--detail
 		/*Специально не стал делать белвй фон - ужасно выглядит*/
 		display -webkit-flex
@@ -222,10 +254,15 @@ h1
 		flex-wrap wrap
 		justify-content space-between
 		align-items center
+		+media(1280px)
+			justify-content space-around 
 		&--item
 			margin-bottom 2em
 			max-width 32%
 			text-align center
+			+media(1280px) 
+				max-width 280px
+				margin 1em
 			&:hover
 				.countries--detail--img
 					box-shadow 0 0 35px -3px $orange
@@ -262,6 +299,11 @@ h1
 			transition animation
 .news,
 .articles
+	+media(1280px)
+		margin-right 1em
+		width 100%
+	+media(640px)
+		margin-right 0
 	&--list
 		border-left 2px solid $lightblue
 		padding-left 5px
@@ -284,6 +326,10 @@ h1
 		align-items center
 		justify-content flex-start
 		padding-bottom 20px
+		+media(1280px)
+			display none
+			&:first-child
+				display block
 		&:last-child
 			padding-bottom 0
 		&__more
@@ -297,9 +343,13 @@ h1
 	&--img
 		width auto
 		height auto
+		+media(1280px)
+			display none
 
 .articles
 	padding-top 65px
+	+media(1280px)
+		padding-top 0
 	.row
 		padding-bottom 10px
 		
@@ -324,3 +374,74 @@ h1
 	font-size 18px
 	padding-bottom 1em
 	font-weight 300
+
+.fixed
+	width 100%
+	background #ffffff
+	position fixed
+	left 0
+	right 0
+	top 0
+	padding 10px 0 5px
+	z-index 2
+
+footer
+	@extend .wrapper
+	padding-top 60px
+	padding-bottom 20px
+
+.footer
+	@extend .wrapper
+	@extend .row
+	position relative
+	justify-content space-between
+	max-width 80%
+	font-family 'Roboto', sans-serif
+	font-size: 14px
+	flex-wrap: wrap
+	+media(1280px)
+		max-width 90%
+	a
+		line-height 2
+		color $blue
+.tel
+	color $blue
+	font-size: 21px
+.mail
+	color #959898
+
+.address
+	+media(1280px)
+		padding-right 1em
+
+.copy
+	+media(1280px)
+		width 100%
+		padding-top 1em
+		display flex
+		flex-direction row
+		justify-content space-around
+		flex-wrap wrap
+		p,
+		a
+			line-height 2
+			margin 0 .5em
+		
+
+.sitename
+	margin-top auto
+	+media(1280px)
+		margin-top 0
+
+.count
+	width 88px
+	height 31px
+	+media(640px)
+		display none
+
+.news-art
+	+media(1280px)
+		flex-direction row
+		flex-wrap: wrap
+		width 100%
+		justify-content space-between

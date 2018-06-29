@@ -14,6 +14,7 @@ section.parallax
 		img.parallax--img(src="img/l-2.png", alt="")
 	.parallax--l-3
 		img.parallax--img(src="img/l-3.png", alt="")
+	.parallax--overlay
 
 +top-nav([{
 	name: 'Куда поехать',
@@ -31,6 +32,7 @@ section.parallax
 	name: 'Где купить',
 	href: '/'
 }, {
-	name: 'Контакты',
-	href: '/'
+	name: 'Калькулятор',
+	href: 'javascript:void(0)',
+	onclick: 'calc("Калькулятор", "red")'
 }])

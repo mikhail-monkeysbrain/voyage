@@ -10,6 +10,24 @@ $('.parallax').mousemove(function(e){
     	'margin-bottom'	: -(X/120).toFixed(),
     });
     $('.parallax--l-3').css('margin-left', -(X/150).toFixed());
+
+
 });
-$(window).scroll(function(){
-});
+$(function(){
+    navPos = $('.nav').offset().top;
+    console.log(navPos);
+
+	$(window).scroll(function(){
+		scroll = $(window).scrollTop();
+		if(scroll>navPos){
+			$('.nav').addClass('fixed');
+		}
+		else{
+			$('.nav').removeClass('fixed');
+		}
+	});
+})
+
+function calc(content, color) {
+	console.log(content, color);
+  }

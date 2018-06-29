@@ -4,7 +4,7 @@ mixin top-nav(items)
 			if i === pageId
 				span.nav-item.nav-item__current
 			else
-				a.nav--item(href=item.href)= item.name
+				a.nav--item(href=item.href onclick=item.onclick)= item.name
 
 mixin countries(items)
 	p.ribbon Выбор стран
